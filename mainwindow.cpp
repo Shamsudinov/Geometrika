@@ -7,9 +7,14 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-//    this->resize(500,500);          // Задаем размеры виджета, то есть окна
-    // Фиксируем размеры виджета
-    this->setFixedSize(520,650);
+    drawModes.push_back(ui->drawModeNone);
+    drawModes.push_back(ui->drawModeTriangle);
+    drawModes.push_back(ui->drawModeRectangle);
+    drawModes.push_back(ui->drawModePolygon);
+    drawModes.push_back(ui->drawModeCircle);
+
+    for(int drawModeIndex = 0; drawModeIndex < drawModes.size(); drawModeIndex++)
+        connect(drawModes[drawModeIndex],&QRadioButton::clicked,this,&MainWindow::test);
 
     // Инициализируем графическую сцену
     scene = new GraphicsScene();
@@ -35,3 +40,12 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::test()
+{
+
+    for(int drawModeIndex = 0; drawModeIndex < drawModes.size(); drawModeIndex++){
+        if(drawModes[drawModeIndex]->isChecked()){
+            scene->setDrawingMode(static_cast<eDrawingMode>(drawModeIndex));
+        }
+    }
+}

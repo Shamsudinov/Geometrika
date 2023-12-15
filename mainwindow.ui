@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>520</width>
-    <height>645</height>
+    <width>761</width>
+    <height>606</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,11 +19,92 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>501</width>
-      <height>511</height>
+      <width>531</width>
+      <height>521</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout"/>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>10</y>
+      <width>191</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Режим рисования</string>
+    </property>
+    <widget class="QRadioButton" name="drawModeNone">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>163</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Выкл</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="drawModeTriangle">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>163</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Треугольник</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="drawModeRectangle">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>163</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Квадрат</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="drawModePolygon">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>163</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Многоугольник</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="drawModeCircle">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>163</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Окружность</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -31,7 +112,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>520</width>
+     <width>761</width>
      <height>22</height>
     </rect>
    </property>

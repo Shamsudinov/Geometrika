@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QRadioButton>
 #include <graphicsview.h>
 #include <graphicsscene.h>
 
@@ -13,6 +14,7 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+    void test();
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -21,5 +23,6 @@ private:
     Ui::MainWindow *ui;
     GraphicsScene  *scene;
     QGraphicsView  *view;
+    QList<QRadioButton*> drawModes;
 };
 #endif // MAINWINDOW_H
