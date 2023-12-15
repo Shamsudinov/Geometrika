@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <graphicsview.h>
 #include <graphicsscene.h>
 
 QT_BEGIN_NAMESPACE
@@ -19,5 +20,6 @@ public:
 private:
     Ui::MainWindow *ui;
     GraphicsScene  *scene;
+    QGraphicsView  *view;
 };
 #endif // MAINWINDOW_H

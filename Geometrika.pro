@@ -17,11 +17,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     graphicsscene.cpp \
+    graphicsview.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     graphicsscene.h \
+    graphicsview.h \
     mainwindow.h
 
 FORMS += \

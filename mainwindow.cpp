@@ -13,24 +13,21 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Инициализируем графическую сцену
     scene = new GraphicsScene();
-
+    view = new GraphicsView();
     // Устанавливаем графическую сцену в graphicsView
-    ui->graphicsView->setScene(scene);
+    view->setScene(scene);
     // Устанавливаем сглаживание
-    ui->graphicsView->setRenderHint(QPainter::Antialiasing);
+    view->setRenderHint(QPainter::Antialiasing);
     // Отключаем скроллбар по вертикали
-    ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     // Отключаем скроллбар по горизонтали
-    ui->graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     // Задаем размеры graphicsView
-    ui->graphicsView->resize(500,500);
+    view->resize(500,500);
     // Устанавливаем область графической сцены
     scene->setSceneRect(-250,-250,500,500);
+    ui->gridLayout->addWidget(view);
 
-    // Добавляем горизонтальную линию через центр
-    scene->addLine(-250,0,250,0,QPen(Qt::black));
-    // Добавляем вертикальную линию через центр
-    scene->addLine(0,-250,0,250,QPen(Qt::black));
 }
 
 MainWindow::~MainWindow()
