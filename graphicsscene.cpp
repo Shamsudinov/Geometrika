@@ -37,7 +37,7 @@ void GraphicsScene::drawBackground(QPainter *painter, const QRectF &rect){
 
 }
 
-void GraphicsScene::wheelEvent(QGraphicsSceneWheelEvent *wheelEvent)
-{
-    QGraphicsScene::wheelEvent(wheelEvent);
-}
+//void GraphicsScene::wheelEvent(QGraphicsSceneWheelEvent *wheelEvent)
+//{
+//    QGraphicsScene::wheelEvent(wheelEvent);
+//}

@@ -16,7 +16,7 @@ public:
 
     void mouseReleaseEvent(QGraphicsSceneMouseEvent * mouseEvent) override;
     void drawBackground(QPainter *painter, const QRectF &rect) override;
-    void wheelEvent(QGraphicsSceneWheelEvent *wheelEvent) override;
+//    void wheelEvent(QGraphicsSceneWheelEvent *wheelEvent) override;
 };
 
 #endif // GRAPHICSSCENE_H
