@@ -3,10 +3,11 @@
 
 #include <QGraphicsScene>
 #include <QGraphicsSceneMouseEvent>
-#include <QGraphicsItem>
 #include <QPainter>
 #include <QStyleOptionGraphicsItem>
 #include <QDebug>
+
+#include "triangle.h"
 
 typedef enum{
 
@@ -22,8 +23,12 @@ class GraphicsScene : public QGraphicsScene
 {
     int mGridSize = 20;
     eDrawingMode drawingMode;
+    QList <QPointF> points;
+//    QList <QGraphicsItem*> items;
+    Triangle *triangle;
 public:
     GraphicsScene();
+    ~GraphicsScene();
 
     void setDrawingMode(eDrawingMode mode);
 

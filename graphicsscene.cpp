@@ -2,7 +2,13 @@
 
 GraphicsScene::GraphicsScene(){
 
-drawingMode = eDrawingMode::DRAW_NONE;
+    drawingMode = eDrawingMode::DRAW_NONE;
+    triangle = new Triangle();
+}
+
+GraphicsScene::~GraphicsScene(){
+
+    delete triangle;
 }
 
 void GraphicsScene::setDrawingMode(eDrawingMode mode){
@@ -14,21 +20,40 @@ void GraphicsScene::setDrawingMode(eDrawingMode mode){
 
 void GraphicsScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent){
 
+    //    qDebug() <<"pos: " << mouseEvent->pos();
+    //    qDebug() <<"scenePos: " << mouseEvent->scenePos();
+    //    qDebug()<<"*****";
+    //    qDebug()<< Q_FUNC_INFO <<mouseEvent->pos();
+
+
     if(drawingMode == eDrawingMode::DRAW_NONE){
         return;
     }
-
-    QGraphicsScene::mouseReleaseEvent(mouseEvent);
-    qDebug() <<"pos: " << mouseEvent->pos();
-    qDebug() <<"scenePos: " << mouseEvent->scenePos();
-    qDebug()<<"*****";
 
     qreal x = mouseEvent->scenePos().x();
     qreal y = mouseEvent->scenePos().y();
     qreal r = 10;
 
-    this->addEllipse(x,y,r,r,QPen(Qt::red),QBrush(Qt::red));
-    //    qDebug()<< Q_FUNC_INFO <<mouseEvent->pos();
+    if(drawingMode == eDrawingMode::DRAW_TRIANGLE){
+
+        if(points.size() < 3){
+
+            points.push_back(QPointF(x,y));
+            this->addEllipse(x-r/2,y-r/2,r,r,QPen(Qt::red),QBrush(Qt::red));
+
+            if(points.size() == 3){
+
+                triangle->setPointA(points[0]);
+                triangle->setPointB(points[1]);
+                triangle->setPointC(points[2]);
+                this->addItem(triangle);
+                this->update();
+            }
+        }
+    }
+
+    QGraphicsScene::mouseReleaseEvent(mouseEvent);
+
 }
 
 void GraphicsScene::drawBackground(QPainter *painter, const QRectF &rect){

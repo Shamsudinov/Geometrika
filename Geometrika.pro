@@ -19,12 +19,14 @@ SOURCES += \
     graphicsscene.cpp \
     graphicsview.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    triangle.cpp
 
 HEADERS += \
     graphicsscene.h \
     graphicsview.h \
-    mainwindow.h
+    mainwindow.h \
+    triangle.h
 
 FORMS += \
     mainwindow.ui
