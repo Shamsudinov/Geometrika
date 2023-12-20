@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     graphicsscene.cpp \
     graphicsview.cpp \
+    line.cpp \
     main.cpp \
     mainwindow.cpp \
     point.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
 HEADERS += \
     graphicsscene.h \
     graphicsview.h \
+    line.h \
     mainwindow.h \
     point.h \
     triangle.h

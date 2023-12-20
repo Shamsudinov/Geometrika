@@ -1,0 +1,80 @@
+#include "triangle.h"
+
+Triangle::Triangle()
+{
+    
+}
+
+Triangle::Triangle(Point A, Point B, Point C){
+
+    this->A = A;
+    this->B = B;
+    this->C = C;
+}
+
+Triangle::~Triangle()
+{
+
+}
+
+void Triangle::setPointA(const Point &A){
+
+    this->A = A;
+}
+
+void Triangle::setPointB(const Point &B){
+
+    this->B = B;
+}
+
+void Triangle::setPointC(const Point &C){
+
+    this->C = C;
+}
+
+Point Triangle::getPointA() const{
+
+    return A;
+}
+
+Point Triangle::getPointB() const{
+
+    return B;
+}
+
+Point Triangle::getPointC() const{
+
+    return C;
+}
+
+void Triangle::info() const
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
