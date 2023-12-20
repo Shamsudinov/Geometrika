@@ -20,6 +20,7 @@ void GraphicsScene::setDrawingMode(eDrawingMode mode){
 
 void GraphicsScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent){
 
+    return;
     //    qDebug() <<"pos: " << mouseEvent->pos();
     //    qDebug() <<"scenePos: " << mouseEvent->scenePos();
     //    qDebug()<<"*****";
@@ -43,10 +44,11 @@ void GraphicsScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent){
 
             if(points.size() == 3){
 
-                triangle->setPointA(points[0]);
-                triangle->setPointB(points[1]);
-                triangle->setPointC(points[2]);
-                this->addItem(triangle);
+//                triangle->setPointA(points[0]);
+//                triangle->setPointB(points[1]);
+//                triangle->setPointC(points[2]);
+//                triangle->setFlag(QGraphicsItem::GraphicsItemFlag::ItemIsMovable);
+//                this->addItem(triangle);
                 this->update();
             }
         }
